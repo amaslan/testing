@@ -40,4 +40,5 @@ def test_complex():
 
 def test_rand():
     x = np.random.uniform(size=10000)
-    npt.assert_almost_equal(mean(x), np.mean(x))
+    # npt.assert_almost_equal(mean(x), np.mean(x))
+    npt.assert_allclose(mean(x), np.mean(x), rtol=1e-12)
